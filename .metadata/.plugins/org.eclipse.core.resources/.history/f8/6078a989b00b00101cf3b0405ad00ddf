@@ -1,0 +1,11 @@
+package ModeloProvincia;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class SetProvincia {
+	Set<Provincia> set = new HashSet<>();
+	Set set2 = new HashSet<>();
+	
+
+}

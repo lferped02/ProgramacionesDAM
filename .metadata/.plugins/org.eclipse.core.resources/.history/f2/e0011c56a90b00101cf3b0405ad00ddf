@@ -1,0 +1,6 @@
+package ModeloProvincia;
+
+public class ListaProvincia {
+	private List <Provincia> 
+
+}

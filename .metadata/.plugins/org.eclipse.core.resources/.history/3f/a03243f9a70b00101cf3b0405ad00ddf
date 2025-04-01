@@ -1,0 +1,5 @@
+package EjemploEnum;
+
+public enum Principal {
+
+}

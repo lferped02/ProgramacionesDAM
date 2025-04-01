@@ -1,0 +1,5 @@
+package ModeloProducto;
+
+public interface IDescuento {
+
+}

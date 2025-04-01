@@ -1,0 +1,6 @@
+package Enum;
+
+public enum Categoria {
+	JEFE_PROYECTO, SCRUM, DESARROLLADOR_SENIOR, DESARROLLADOR_JUNIOR, ARQUITECTO
+
+}

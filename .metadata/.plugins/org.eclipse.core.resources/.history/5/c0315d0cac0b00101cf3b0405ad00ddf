@@ -1,0 +1,6 @@
+package ColeccionesProvincia;
+
+public class ListaProvincia {
+	private List <Provincia> 
+
+}

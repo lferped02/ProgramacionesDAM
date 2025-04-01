@@ -1,0 +1,8 @@
+package ModeloProvincia;
+
+public class ProvinciaRepetidorException extends Exception{
+	public ProvinciaRepetidorException (String mensaje) {
+		super(mensaje);
+	}
+F
+}

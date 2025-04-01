@@ -1,0 +1,6 @@
+package Enum;
+
+public class TipoPescado {
+	BLANCO,AZUL,MARISCO;
+
+}

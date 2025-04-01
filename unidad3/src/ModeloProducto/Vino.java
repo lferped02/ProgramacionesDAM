@@ -1,0 +1,107 @@
+package ModeloProducto;
+
+import java.time.LocalDate;
+
+public class Vino extends Producto implements IAlimento,ILiquidos,IDescuento {
+
+	
+	/*Constructor padre*/
+	public Vino(int id, String nombre, String descripcion, int precio_venta) {
+		super(id, nombre, descripcion, precio_venta);
+		// TODO Auto-generated constructor stub
+	}
+	String marca;
+	int grados;
+	double precio;
+	float graduacionAlcoholica;
+	
+	/**
+	 * @param id
+	 * @param nombre
+	 * @param descripcion
+	 * @param precio_venta
+	 * @param iva
+	 * @param marca
+	 * @param grados
+	 * @param precio
+	 */
+	
+	/*Constructor de la clase / hijo*/
+	
+	public Vino(int id, String nombre, String descripcion, int precio_venta, int iva, String marca, int grados,
+			double precio) {
+		super(id, nombre, descripcion, precio_venta);
+		this.marca = marca;
+		this.grados = grados;
+		this.precio = precio;
+		
+	}
+	
+	@Override
+	public int getCalorias() {
+		// TODO Auto-generated method stub
+		return this.grados*10;
+	}
+
+	@Override
+	public void setDescuento(double des) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public double getDescuento() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public double getPrecioDescuento() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void setVolumen(double v) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public double getVolumen() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void setTipoEnvase(String env) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public String getTipoEnvase() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setCaducidad(LocalDate fecha) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public LocalDate getCaducidad() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void setCaducidad(LocalDate fecha) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+
+}

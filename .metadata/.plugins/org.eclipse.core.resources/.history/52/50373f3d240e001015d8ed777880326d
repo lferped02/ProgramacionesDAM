@@ -1,0 +1,91 @@
+package ModeloProducto;
+
+public class Detergente extends Producto implements ILiquidos, IDescuento {
+
+	TipoDeDetergente nombre_detergente;
+	TipoDeRopa nombre_ropa;
+	double descuento;
+	double volumen;
+	String tipoDeEnvase;
+
+	public Detergente(int id, String nombre, String descripcion, int precio_venta) {
+		super(id, nombre, descripcion, precio_venta);
+		// TODO Auto-generated constructor stub
+	}
+
+	/**
+	 * @param id
+	 * @param nombre
+	 * @param descripcion
+	 * @param precio_venta
+	 * @param iva
+	 * @param nombre_detergente
+	 * @param nombre_ropa
+	 */
+	public Detergente(int id, String nombre, String descripcion, int precio_venta, TipoDeDetergente nombre_detergente,
+			TipoDeRopa nombre_ropa) {
+		super(id, nombre, descripcion, precio_venta);
+		this.nombre_detergente = nombre_detergente;
+		this.nombre_ropa = nombre_ropa;
+
+	}
+
+	public TipoDeDetergente getNombre_detergente() {
+		return nombre_detergente;
+	}
+
+	public void setNombre_detergente(TipoDeDetergente nombre_detergente) {
+		this.nombre_detergente = nombre_detergente;
+	}
+
+	public TipoDeRopa getNombre_ropa() {
+		return nombre_ropa;
+	}
+
+	public void setNombre_ropa(TipoDeRopa nombre_ropa) {
+		this.nombre_ropa = nombre_ropa;
+	}
+
+	@Override
+	public void setDescuento(double des) {
+		// TODO Auto-generated method stub
+		this.descuento = des;
+	}
+
+	@Override
+	public double getDescuento() {
+		// TODO Auto-generated method stub
+		return this.descuento;
+	}
+
+	@Override
+	public double getPrecioDescuento() {
+		// TODO Auto-generated method stub
+		return this.precio_venta - this.descuento * this.precio_venta;
+	}
+
+	@Override
+	public void setVolumen(double v) {
+		// TODO Auto-generated method stub
+		this.volumen = v;
+	}
+
+	@Override
+	public double getVolumen() {
+		// TODO Auto-generated method stub
+		return this.volumen;
+	}
+
+	@Override
+	public void setTipoEnvase(String env) {
+		// TODO Auto-generated method stub
+		this.tipoDeEnvase = env;
+	}
+
+	@Override
+	public String getTipoEnvase() {
+		// TODO Auto-generated method stub
+		return this.tipoDeEnvase;
+	}
+
+}

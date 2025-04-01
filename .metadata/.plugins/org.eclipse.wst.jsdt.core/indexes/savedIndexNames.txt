@@ -1,0 +1,7 @@
+INDEX VERSION 1.4+C:\Users\lferped0202\Desktop\ProgramacionesDAM\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+4151760907.index
+3677677168.index
+1716546531.index
+2976868357.index
+647074199.index
+2919686422.index

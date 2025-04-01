@@ -1,0 +1,69 @@
+package ColeccionesProvincia;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import ModeloProvincia.Provincia;
+import ModeloProvincia.ProvinciaRepetidorException;
+
+public class ListaProvincia {
+	private List<Provincia> ListaProvincias;
+	public List<Provincia> Provincia = new LinkedList<>();
+
+	public List<Provincia> getListaProvincias() {
+		return ListaProvincias;
+	}
+
+	public void setListaProvincias(List<Provincia> listaProvincias) {
+		ListaProvincias = listaProvincias;
+	}
+
+	public List<Provincia> getProvincia() {
+		return Provincia;
+	}
+
+	public void setProvincia(List<Provincia> provincia) {
+		Provincia = provincia;
+	}
+
+	public boolean addSinRepetidos(Provincia p) throws ProvinciaRepetidorException {
+		boolean agregado = false;
+		if (Provincia.contains(p)) {
+			throw new ProvinciaRepetidorException("provincia repetida");
+		} else {
+			agregado = ListaProvincias.add(p);
+		}
+		return agregado;
+	}
+
+	public Provincia setSinRepetidos(int index, Provincia nuevaProvincia) throws ProvinciaRepetidorException {
+		Provincia actual = Provincia.get(index);
+
+		if (Provincia.contains(nuevaProvincia))
+			throw new ProvinciaRepetidorException("Provincia repetida");
+		else
+			actual = Provincia.set(index, nuevaProvincia);
+
+		return actual;
+
+	}
+
+	public static void main(String[] args) {
+		ListaProvincia listaProvincias = new ListaProvincia();
+
+		try {
+			listaProvincias.addSinRepetidos(new Provincia("Sevilla", 1950000));
+			listaProvincias.addSinRepetidos(new Provincia("Cadiz", 1240000));
+			listaProvincias.addSinRepetidos(new Provincia("Huelva", 5240000));
+			listaProvincias.addSinRepetidos(new Provincia("Cadiz", 1300000));
+
+		} catch (ProvinciaRepetidorException e) {
+			System.out.println("Error;" + e.getMessage());
+		}
+		System.out.println("Lista final:");
+		for (Provincia p : listaProvincias.ListaProvincias) {
+			System.out.println(p);
+		}
+	}
+
+}

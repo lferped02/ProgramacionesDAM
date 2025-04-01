@@ -1,0 +1,10 @@
+package Tablas;
+
+public class Días_semanas_miércoles {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

@@ -1,0 +1,10 @@
+package Tablas;
+
+public class Mostrar_contenido_tabla {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

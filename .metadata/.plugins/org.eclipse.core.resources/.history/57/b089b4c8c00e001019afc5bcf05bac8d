@@ -1,0 +1,59 @@
+package ModeloEquiposDeportivos;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class Equipo {
+	private String nombre;
+	private Set<Alumno> alumnos;
+
+	public Equipo(String nombre) {
+		this.nombre = nombre;
+		this.alumnos = new HashSet<>();
+	}
+
+	public void añadirAlumno(Alumno alumno) throws DeportivosException {
+		if (!Alumno.add(alumno)) {
+			throw new DeportivosException("El alumno ya está en el equipo.");
+		}
+	}
+
+	public void borrarAlumno(Alumno alumno) throws DeportivosException {
+		if (!alumnos.remove(alumno)) {
+			throw new DeportivosException("El alumno no existe en el equipo.");
+		}
+	}
+
+	public Alumno perteneceEquipo(Alumno alumno) {
+		if (alumnos.contains(alumno)) {
+			return alumno;
+		} else {
+			return null;
+		}
+	}
+
+	public void mostrarAlumnos() {
+		if (alumnos.isEmpty()) {
+			System.out.println("El equipo no tiene jugadores.");
+		} else {
+			for (Alumno alumno : alumnos) {
+				System.out.println(alumno);
+			}
+		}
+	}
+
+	public Equipo union(Equipo otroEquipo) {
+		Equipo nuevoEquipo = new Equipo(this.nombre + " y " + otroEquipo.nombre);
+		nuevoEquipo.alumnos.addAll(this.alumnos);
+		nuevoEquipo.alumnos.addAll(otroEquipo.alumnos);
+		return nuevoEquipo;
+	}
+
+	public Equipo interseccion(Equipo otroEquipo) {
+		Equipo nuevoEquipo = new Equipo(this.nombre + " y " + otroEquipo.nombre);
+		nuevoEquipo.alumnos.addAll(this.alumnos);
+		nuevoEquipo.alumnos.retainAll(otroEquipo.alumnos);
+		return nuevoEquipo;
+	}
+
+}
