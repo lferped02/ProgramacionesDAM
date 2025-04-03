@@ -41,5 +41,10 @@ public class Alumno {
 		// TODO Auto-generated method stub
 		return false;
 	}
+	// public int CompareTo() {
+	// int nombre = this.nombre.compareTo(Alumno.);
+	// return nombre;
+
+//	}
 
 }
